@@ -11,8 +11,7 @@ namespace InterviewExerciseApi.Tests.Controllers
     public class Controller_LiftTests
     {
         private const string OUT_OF_SERVICE = "OutOfService";
-        private const string STOPPED = "Stopped";
-        private const string MOVING = "Moving";
+        private const string STOPPED = "Stopped";        
 
         [TestClass]
         public class CallShould : Controller_LiftTests
@@ -59,7 +58,7 @@ namespace InterviewExerciseApi.Tests.Controllers
 
             //public void ReturnTrueLiftDescendToFloor()
 
-            //public void ReturnTrueLiftDescendToFloor();
+            //public void ReturnTrueLiftAscendToFloor();
 
             //public void ReturnFalseAllOutOfService()
 

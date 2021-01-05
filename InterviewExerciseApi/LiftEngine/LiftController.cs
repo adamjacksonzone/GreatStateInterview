@@ -1,4 +1,5 @@
 ﻿// personally I store usings within the namespace, but whatever is the company convention should be applied.
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;

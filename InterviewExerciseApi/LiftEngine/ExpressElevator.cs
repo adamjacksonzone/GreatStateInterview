@@ -25,9 +25,8 @@
         private bool _doorsOpen = false;
 
         private readonly StateMachine<State, Trigger> _liftStateMachine;
-        private readonly StateMachine<State, Trigger>.TriggerWithParameters<int> _callTrigger;
 
-        #region Lift public methods
+        private readonly StateMachine<State, Trigger>.TriggerWithParameters<int> _callTrigger;
 
         public ExpressElevator()
         {
@@ -59,7 +58,6 @@
         {
             return _currentFloor;
         }
-
         
         public void MoveTo(int floor)
         {
@@ -71,10 +69,6 @@
             return _doorsOpen;
         }
 
-        #endregion
-
-        #region Lift private methods
-
         private void OpenDoors()
         {
             _doorsOpen = true;
@@ -84,7 +78,6 @@
         {
             _doorsOpen = false;
         }
-
         
         /// <summary>
         /// Determine if lift should move
@@ -99,7 +92,6 @@
                 CloseDoors();
             }
             
-
             if(floor != _currentFloor)
             {
                 moved = GoDirectlyToFloor(floor);
@@ -131,7 +123,5 @@
 
             return true;
         }
-
-        #endregion
     }
 }
