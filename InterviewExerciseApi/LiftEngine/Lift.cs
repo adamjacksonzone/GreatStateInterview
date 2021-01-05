@@ -87,17 +87,27 @@ namespace InterviewExerciseApi.LiftEngine
 
         // Moves the lift to the specified floor
         private void Move(int floor)
-        {
-            // todo: what happens if the desired floor is the same as the current floor?
+        {   
             var moved = false;
+
+            if (AreDoorsOpen())
+            {
+                // close doors before moving
+                CloseDoors();
+            }
 
             if (floor > _currentFloor)
             {
                 moved = AscendTo(floor);
             }
-            else
+            else if(floor < _currentFloor)
             {
                 moved = DescendTo(floor);
+            }
+            else
+            {
+                // already at current floor
+                moved = true;
             }
 
             if (moved)

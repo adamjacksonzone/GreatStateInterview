@@ -1,7 +1,10 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterviewExerciseApi", "InterviewExerciseApi\InterviewExerciseApi.csproj", "{B3975AA7-5DF6-4376-85D5-DD40FAC43287}"
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InterviewExerciseApi", "InterviewExerciseApi\InterviewExerciseApi.csproj", "{B3975AA7-5DF6-4376-85D5-DD40FAC43287}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterviewExerciseApi.Tests", "InterviewExerciseApi.Tests\InterviewExerciseApi.Tests.csproj", "{AC80BC18-2DA3-4A5B-9D31-7C31982AB6DE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,5 +16,15 @@ Global
 		{B3975AA7-5DF6-4376-85D5-DD40FAC43287}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3975AA7-5DF6-4376-85D5-DD40FAC43287}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3975AA7-5DF6-4376-85D5-DD40FAC43287}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC80BC18-2DA3-4A5B-9D31-7C31982AB6DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC80BC18-2DA3-4A5B-9D31-7C31982AB6DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC80BC18-2DA3-4A5B-9D31-7C31982AB6DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC80BC18-2DA3-4A5B-9D31-7C31982AB6DE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C10F31AF-3E73-430B-8DAE-D83ED48CD582}
 	EndGlobalSection
 EndGlobal

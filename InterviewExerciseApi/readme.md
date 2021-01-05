@@ -12,10 +12,10 @@ The approach is deliberately incomplete and may be sub-optimal.
 
 There are two public API endpoints, one for calling a lift, the other for getting the status of all lifts.
 
-The lift controller contains the business logic for attempting to summon the closest lift.
 
 All persistence happens in-memory - no database has been implemented.
 
+The lift controller contains the business logic for attempting to summon the closest lift.
 The lifts themselves encapsulate some of their logic inside a state machine.
 
 The state machine configuration determines which 'state' the lift transitions into (e.g. stopped, moving) and 
@@ -23,14 +23,14 @@ what triggers the state transition (e.g. lift has been called, lift has arrived)
 
 ## Your tasks
 
-1. Talk us through a code review of the 'Call()' method in LiftController.cs. Some areas to think about:
+x 1. Talk us through a code review of the 'Call()' method in LiftController.cs. Some areas to think about:
     - Is it readable?
     - Are there any obvious code smells?
     - How else would you improve it?
     
-2. Talk us through some examples of unit tests you would write for the 'Call()' method mentioned in the previous question?
+x 2. Talk us through some examples of unit tests you would write for the 'Call()' method mentioned in the previous question?
 
-3. Implement the unit tests discussed in the previous question.
+x 3. Implement the unit tests discussed in the previous question.
 
 4. Identify the problem causing lifts to malfunction after they have been called once, and fix it.
 
