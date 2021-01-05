@@ -84,14 +84,14 @@
         private void Move(int floor)
         {
             var moved = false;
-
-            if(AreDoorsOpen())
-            {
-                CloseDoors();
-            }
-            
+                
             if(floor != _currentFloor)
             {
+                if (AreDoorsOpen())
+                {
+                    CloseDoors();
+                }
+
                 moved = GoDirectlyToFloor(floor);
             }
             else
