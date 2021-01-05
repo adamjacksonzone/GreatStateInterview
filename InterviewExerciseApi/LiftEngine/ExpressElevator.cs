@@ -94,6 +94,10 @@
             {
                 moved = GoDirectlyToFloor(floor);
             }
+            else
+            {
+                moved = true;
+            }
             
             if(moved)
             {
