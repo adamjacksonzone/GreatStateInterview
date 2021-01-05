@@ -87,8 +87,8 @@ namespace InterviewExerciseApi.LiftEngine
 
         // Moves the lift to the specified floor
         private void Move(int floor)
-        {   
-            var moved = false;
+        {
+            bool moved;
 
             if (AreDoorsOpen())
             {

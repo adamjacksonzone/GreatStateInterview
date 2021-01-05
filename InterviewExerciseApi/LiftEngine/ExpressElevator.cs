@@ -83,7 +83,7 @@
         /// <param name="floor"></param>
         private void Move(int floor)
         {
-            var moved = false;
+            bool moved;
                 
             if(floor != _currentFloor)
             {
