@@ -4,7 +4,6 @@
     using System.Threading.Tasks;
     using Stateless;
 
-    // 4. Identify the problem causing lifts to malfunction after they have been called once, and fix it.
     public class ExpressElevator : ILift
     {
         // Represents the State the lift is currently in
@@ -52,8 +51,7 @@
                 .PermitReentry(Trigger.Arrived)
                 .OnEntry(Debugger.Break);            
         }
-
-        // Returns the current floor of the lift
+                
         public int CurrentFloor()
         {
             return _currentFloor;
@@ -102,12 +100,7 @@
                 _liftStateMachine.Fire(Trigger.Arrived);
             }            
         }
-
-        /// <summary>
-        /// Go directly to the desired floor
-        /// </summary>
-        /// <param name="desiredFloor"></param>
-        /// <returns></returns>
+                
         private bool GoDirectlyToFloor(int desiredFloor)
         {
             if (_doorsOpen)
