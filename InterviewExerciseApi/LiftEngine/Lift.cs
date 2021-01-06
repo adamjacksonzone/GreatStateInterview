@@ -88,7 +88,7 @@ namespace InterviewExerciseApi.LiftEngine
         // Moves the lift to the specified floor
         private void Move(int floor)
         {
-            bool moved;
+            bool arrivedAtFloor;
 
             if (AreDoorsOpen())
             {
@@ -98,19 +98,19 @@ namespace InterviewExerciseApi.LiftEngine
 
             if (floor > _currentFloor)
             {
-                moved = AscendTo(floor);
+                arrivedAtFloor = AscendTo(floor);
             }
             else if(floor < _currentFloor)
             {
-                moved = DescendTo(floor);
+                arrivedAtFloor = DescendTo(floor);
             }
             else
             {
                 // already at current floor
-                moved = true;
+                arrivedAtFloor = true;
             }
 
-            if (moved)
+            if (arrivedAtFloor)
             {
                 _liftStateMachine.Fire(Trigger.Arrived);
             }

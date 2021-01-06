@@ -4,6 +4,8 @@
     using System.Threading.Tasks;
     using Stateless;
 
+
+    // would normally create a shared base class but in interests of time for this test just copied the class file
     public class ExpressElevator : ILift
     {
         // Represents the State the lift is currently in
@@ -83,7 +85,7 @@
         /// <param name="floor"></param>
         private void Move(int floor)
         {
-            bool moved;
+            bool arrivedAtFloor;
                 
             if(floor != _currentFloor)
             {
@@ -92,14 +94,14 @@
                     CloseDoors();
                 }
 
-                moved = GoDirectlyToFloor(floor);
+                arrivedAtFloor = GoDirectlyToFloor(floor);
             }
             else
             {
-                moved = true;
+                arrivedAtFloor = true;
             }
             
-            if(moved)
+            if(arrivedAtFloor)
             {
                 _liftStateMachine.Fire(Trigger.Arrived);
             }            
